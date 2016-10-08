@@ -7,7 +7,7 @@ for filename in os.listdir("xkcd"):
 		volume = volume + 1
 		os.makedirs("xkcd_" + str(volume), exist_ok=True)
 
-	shutil.move("xkcd/" + str(filename), "xkcd_" + str(volume) + "/" + str(filename))
+	shutil.copy2("xkcd/" + str(filename), "xkcd_" + str(volume) + "/" + str(filename))
 	counter = counter + 1
 
 print("Done.")

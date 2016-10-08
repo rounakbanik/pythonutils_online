@@ -1,7 +1,7 @@
 #Use Python 3 to run script
 import bs4, requests, os, sys
 
-url = 'http://xkcd.com/1029'
+url = 'http://xkcd.com/'
 home = 'http:'
 os.makedirs('xkcd', exist_ok=True)
 
@@ -16,6 +16,10 @@ while not url.endswith('#'):
 		print('Could not find comic image.')
 	else:
 		comicUrl = home + comicElem[0].get('src')
+
+		if os.path.exists(os.path.join('xkcd', os.path.basename(comicUrl))):
+			print("Repository up to date.")
+			sys.exit() 
 
 		print('Downloading image %s...' % (comicUrl))
 		res = requests.get(comicUrl)

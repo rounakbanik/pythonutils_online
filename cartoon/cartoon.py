@@ -2,7 +2,7 @@
 import bs4, requests, os, sys, time
 from selenium import webdriver
 
-home_url = "http://kisscartoon.me"
+home_url = "*************"
 print("Enter the Series' URL: ")
 #cartoon_url = "http://kisscartoon.me/Cartoon/Dexter-s-Laboratory-Season-01"
 cartoon_url = input()

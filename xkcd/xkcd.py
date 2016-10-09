@@ -13,7 +13,7 @@ while not url.endswith('#'):
 
 	comicElem = soup.select('#comic img')
 	if comicElem == []:
-		print('Could not find comic image.')
+		print('Could not find an image.')
 	else:
 		comicUrl = home + comicElem[0].get('src')
 
